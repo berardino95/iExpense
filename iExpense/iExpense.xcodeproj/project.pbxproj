@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F8784E32A08CF8B003B31B5 /* ModifyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8784E22A08CF8B003B31B5 /* ModifyItemView.swift */; };
 		7FDE7E6A2A083151008AF391 /* iExpenseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE7E692A083151008AF391 /* iExpenseApp.swift */; };
 		7FDE7E6C2A083151008AF391 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDE7E6B2A083151008AF391 /* ContentView.swift */; };
 		7FDE7E6E2A083153008AF391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDE7E6D2A083153008AF391 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F8784E22A08CF8B003B31B5 /* ModifyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyItemView.swift; sourceTree = "<group>"; };
 		7FDE7E662A083151008AF391 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDE7E692A083151008AF391 /* iExpenseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpenseApp.swift; sourceTree = "<group>"; };
 		7FDE7E6B2A083151008AF391 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			children = (
 				7FDE7E692A083151008AF391 /* iExpenseApp.swift */,
 				7FDE7E6B2A083151008AF391 /* ContentView.swift */,
+				7F8784E22A08CF8B003B31B5 /* ModifyItemView.swift */,
 				7FDE7E7B2A083F63008AF391 /* AddView.swift */,
 				7FDE7E772A0838DD008AF391 /* ExpenseItem.swift */,
 				7FDE7E792A083915008AF391 /* Expenses.swift */,
@@ -151,6 +154,7 @@
 				7FDE7E7C2A083F63008AF391 /* AddView.swift in Sources */,
 				7FDE7E782A0838DD008AF391 /* ExpenseItem.swift in Sources */,
 				7FDE7E6A2A083151008AF391 /* iExpenseApp.swift in Sources */,
+				7F8784E32A08CF8B003B31B5 /* ModifyItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

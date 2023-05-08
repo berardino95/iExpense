@@ -14,22 +14,24 @@ struct ContentView: View {
     @State private var showingAddExpense = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 //iterating over our array accessing by expense.items passing as id the name of the ExpenseItem, our item conform to Identifiable protocol, in this case we don't need to specify the id in the ForEach
-                ForEach(expenses.items){ item in
-                    HStack{
-                        VStack(alignment: .leading){
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
-                                .font(.callout)
+                ForEach($expenses.items){ $item in
+                    NavigationLink (destination: ModifyItemView(expenses: expenses, item: $item),
+                                    label: {
+                        HStack{
+                            VStack(alignment: .leading){
+                                Text(item.name)
+                                    .font(.headline)
+                                Text(item.type)
+                                    .font(.callout)
+                            }
+                            Spacer()
+                            
+                            Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "Eur"))
                         }
-                        Spacer()
-                        
-                        Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "Eur"))
-                    }
-                    
+                    })
                 }
                 .onDelete(perform: removeExpense)
             }
@@ -53,9 +55,9 @@ struct ContentView: View {
     }
     
 }
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
+}
