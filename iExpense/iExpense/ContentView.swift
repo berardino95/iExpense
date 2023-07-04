@@ -32,6 +32,9 @@ struct ContentView: View {
                             Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "Eur"))
                         }
                     })
+                    .accessibilityElement()
+                    .accessibilityLabel("\(item.name) amount: \(item.amount.formatted(.currency(code: Locale.current.currency?.identifier ?? "Eur")))")
+                    .accessibilityHint(item.type)
                 }
                 .onDelete(perform: removeExpense)
             }
